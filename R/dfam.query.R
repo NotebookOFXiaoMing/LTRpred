@@ -26,7 +26,7 @@ dfam.query <- function(seq.file,
             Dfam.db = 'download' so that Dfam.hmm is automatically loaded by this function
             (make sure that the internet connection is stabe).", call. = FALSE)
     
-    if (!file.exists("/usr/local/bin/dfamscan.pl"))
+    if (!file.exists("/home/myan/anaconda3/envs/syri/bin/dfamscan.pl"))
         stop("The perl script 'dfamscan.pl' could not be found! Please download 'dfamscan.pl' from 'http://www.dfam.org/web_download/Current_Release/dfamscan.pl' and store it in '/usr/local/bin'.", call. = FALSE)
     
     if (!file.exists(seq.file))
@@ -63,7 +63,7 @@ dfam.query <- function(seq.file,
         dfamscan <- system(
             paste0(
                 "perl ",
-                "/usr/local/bin/dfamscan.pl",
+                "/home/myan/anaconda3/envs/syri/bin/dfamscan.pl",
                 " -fastafile ",
                 ws.wrap.path(seq.file),
                 " -hmmfile ",
@@ -103,7 +103,7 @@ dfam.query <- function(seq.file,
         system(
             paste0(
                 "perl ",
-                "/usr/local/bin/dfamscan.pl",
+                "/home/myan/anaconda3/envs/syri/bin/dfamscan.pl",
                 " -fastafile ",
                 ws.wrap.path(seq.file),
                 " -hmmfile ",
